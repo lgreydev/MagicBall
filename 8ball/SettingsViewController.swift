@@ -10,6 +10,8 @@ import UIKit
 
 class SettingsViewController: UIViewController {
 
+    var listAnswers: [String] = []
+    
     private let table: UITableView = {
         let table = UITableView()
         table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
@@ -23,24 +25,18 @@ class SettingsViewController: UIViewController {
         view.addSubview(table)
         
         table.dataSource = self
-        table.backgroundColor = .blue
-        
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(
             barButtonSystemItem: .add,
             target: self,
             action: #selector(addTap))
-        
     }
-    
-            
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         table.frame = view.bounds
     }
     
-
     @objc private func addTap() {
         let alert = UIAlertController(
             title: "My answers",
@@ -51,11 +47,14 @@ class SettingsViewController: UIViewController {
             field.placeholder = "Enter answer....."
         }
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-        alert.addAction(UIAlertAction(title: "Done", style: .default, handler: {_ in
+        alert.addAction(UIAlertAction(title: "Done", style: .default, handler: { [weak self] (_) in
             guard let field = alert.textFields?.first else { fatalError() }
             guard let text = field.text, !text.isEmpty else { fatalError() }
             
-            print(text)
+            DispatchQueue.main.async {
+                self?.listAnswers.append(text)
+                self?.table.reloadData()
+            }
         }))
         
         present(alert, animated: true)
@@ -65,11 +64,12 @@ class SettingsViewController: UIViewController {
 
 extension SettingsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return listAnswers.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        cell.textLabel?.text = listAnswers[indexPath.row]
         return cell
     }
 }
