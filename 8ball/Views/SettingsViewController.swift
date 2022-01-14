@@ -69,7 +69,7 @@ extension SettingsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = listAnswers[indexPath.row]
-        cell.backgroundColor = .black
+        cell.backgroundColor = .gray.withAlphaComponent(0.2)
         cell.textLabel?.textColor = .white
         return cell
     }
