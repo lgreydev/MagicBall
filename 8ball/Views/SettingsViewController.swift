@@ -10,7 +10,7 @@ import UIKit
 
 class SettingsViewController: UIViewController {
 
-    var listAnswers: [String] = ["Just do it!", "You rock!", "All or nothing."]
+    var listAnswers: [String] = Answers.demoData
     
     private let table: UITableView = {
         let table = UITableView()
@@ -20,7 +20,6 @@ class SettingsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        listAnswers += UserDefaults.standard.stringArray(forKey: "items") ?? []
         table.dataSource = self
         table.backgroundColor = .black
         title = "Settings"
@@ -50,9 +49,9 @@ class SettingsViewController: UIViewController {
             guard let text = field.text, !text.isEmpty else { fatalError() }
             
             DispatchQueue.main.async {
-                var currentItems = UserDefaults.standard.stringArray(forKey: "items") ?? []
-                currentItems.append(text)
-                UserDefaults.standard.setValue(currentItems, forKey: "items")
+//                var currentItems = UserDefaults.standard.stringArray(forKey: "demo") ?? []
+//                currentItems.append(text)
+//                UserDefaults.standard.setValue(currentItems, forKey: "demo")
                 self?.listAnswers.append(text)
                 self?.table.reloadData()
             }
@@ -73,5 +72,15 @@ extension SettingsViewController: UITableViewDataSource {
         cell.backgroundColor = .black
         cell.textLabel?.textColor = .white
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+//            var currentItems = UserDefaults.standard.stringArray(forKey: "demo") ?? []
+//            currentItems.remove(at: indexPath.row)
+//            UserDefaults.standard.setValue(currentItems, forKey: "demo")
+            self.listAnswers.remove(at: indexPath.row)
+            self.table.deleteRows(at: [indexPath], with: .automatic)
+        }
     }
 }
