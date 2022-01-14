@@ -10,7 +10,7 @@ import UIKit
 
 class SettingsViewController: UIViewController {
 
-    var listAnswers: [String] = []
+    var listAnswers: [String] = ["Just do it!", "You rock!", "All or nothing."]
     
     private let table: UITableView = {
         let table = UITableView()
@@ -20,12 +20,11 @@ class SettingsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        listAnswers += UserDefaults.standard.stringArray(forKey: "items") ?? []
+        table.dataSource = self
+        table.backgroundColor = .black
         title = "Settings"
         view.addSubview(table)
-        
-        table.dataSource = self
-        
         navigationItem.rightBarButtonItem = UIBarButtonItem(
             barButtonSystemItem: .add,
             target: self,
@@ -42,7 +41,6 @@ class SettingsViewController: UIViewController {
             title: "My answers",
             message: "Set and save answers",
             preferredStyle: .alert)
-    
         alert.addTextField { field in
             field.placeholder = "Enter answer....."
         }
@@ -52,11 +50,13 @@ class SettingsViewController: UIViewController {
             guard let text = field.text, !text.isEmpty else { fatalError() }
             
             DispatchQueue.main.async {
+                var currentItems = UserDefaults.standard.stringArray(forKey: "items") ?? []
+                currentItems.append(text)
+                UserDefaults.standard.setValue(currentItems, forKey: "items")
                 self?.listAnswers.append(text)
                 self?.table.reloadData()
             }
         }))
-        
         present(alert, animated: true)
     }
 }
@@ -70,6 +70,8 @@ extension SettingsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = listAnswers[indexPath.row]
+        cell.backgroundColor = .black
+        cell.textLabel?.textColor = .white
         return cell
     }
 }
