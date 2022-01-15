@@ -10,7 +10,7 @@ import Foundation
 struct Answers {
     
   static var demoData = ["Just do it!", "You rock!", "All or nothing."]
-    
+  static var serverData: [String] = ["Shake me!"]
 
 }
 
