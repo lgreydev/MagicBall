@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -32,6 +31,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="magic_ background" translatesAutoresizingMaskIntoConstraints="NO" id="NfC-Db-7hu">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WE2-SY-vwy">
                                 <rect key="frame" x="171.5" y="430" width="71" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -42,8 +45,12 @@
                         <viewLayoutGuide key="safeArea" id="5rp-cw-p6o"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="NfC-Db-7hu" firstAttribute="trailing" secondItem="5rp-cw-p6o" secondAttribute="trailing" id="37J-em-BQN"/>
+                            <constraint firstItem="NfC-Db-7hu" firstAttribute="top" secondItem="9Nh-3H-SYA" secondAttribute="top" id="7Ne-ew-RXb"/>
                             <constraint firstItem="WE2-SY-vwy" firstAttribute="centerX" secondItem="9Nh-3H-SYA" secondAttribute="centerX" id="hDu-UC-jQB"/>
                             <constraint firstItem="WE2-SY-vwy" firstAttribute="centerY" secondItem="9Nh-3H-SYA" secondAttribute="centerY" id="luu-4q-2ES"/>
+                            <constraint firstAttribute="bottom" secondItem="NfC-Db-7hu" secondAttribute="bottom" id="p2g-IK-niR"/>
+                            <constraint firstItem="NfC-Db-7hu" firstAttribute="leading" secondItem="5rp-cw-p6o" secondAttribute="leading" id="pUm-Ui-bta"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="Q0t-W3-bL6"/>
@@ -53,17 +60,17 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bdb-4J-alt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1096" y="-290"/>
+            <point key="canvasLocation" x="-1097.1014492753625" y="-290.625"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Wca-8n-NUl">
             <objects>
                 <tabBarController hidesBottomBarWhenPushed="YES" id="wZc-xy-7xF" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xJH-KC-XUc">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="xJH-KC-XUc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="selectedImageTintColor" systemColor="linkColor"/>
+                        <color key="backgroundColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="6g3-aV-6sN" kind="relationship" relationship="viewControllers" id="drS-ey-kTk"/>
@@ -100,8 +107,6 @@
     <resources>
         <image name="folder.fill.badge.gearshape" catalog="system" width="128" height="94"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
-        <systemColor name="linkColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
+        <image name="magic_ background" width="371.5" height="804"/>
     </resources>
 </document>
