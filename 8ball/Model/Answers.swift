@@ -14,8 +14,6 @@ struct Answers {
 
 }
 
-
-
 // MARK: - Welcome
 struct Welcome: Codable {
     let magic: Magic

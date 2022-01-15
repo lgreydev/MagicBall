@@ -10,7 +10,7 @@ import UIKit
 
 class SettingsViewController: UIViewController {
 
-    var listAnswers: [String] = Answers.demoData
+//    var listAnswers: [String] = Answers.demoData
     
     private let table: UITableView = {
         let table = UITableView()
@@ -52,7 +52,8 @@ class SettingsViewController: UIViewController {
 //                var currentItems = UserDefaults.standard.stringArray(forKey: "demo") ?? []
 //                currentItems.append(text)
 //                UserDefaults.standard.setValue(currentItems, forKey: "demo")
-                self?.listAnswers.append(text)
+//                self?.listAnswers.append(text) // TOD
+                Answers.demoData.append(text)
                 self?.table.reloadData()
             }
         }))
@@ -63,12 +64,14 @@ class SettingsViewController: UIViewController {
 
 extension SettingsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return listAnswers.count
+//        return listAnswers.count // TODO
+        return Answers.demoData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = listAnswers[indexPath.row]
+//        cell.textLabel?.text = listAnswers[indexPath.row] // TODO
+        cell.textLabel?.text = Answers.demoData[indexPath.row]
         cell.backgroundColor = .gray.withAlphaComponent(0.2)
         cell.textLabel?.textColor = .white
         return cell
@@ -79,7 +82,8 @@ extension SettingsViewController: UITableViewDataSource {
 //            var currentItems = UserDefaults.standard.stringArray(forKey: "demo") ?? []
 //            currentItems.remove(at: indexPath.row)
 //            UserDefaults.standard.setValue(currentItems, forKey: "demo")
-            self.listAnswers.remove(at: indexPath.row)
+//            self.listAnswers.remove(at: indexPath.row) // TODO
+            Answers.demoData.remove(at: indexPath.row)
             self.table.deleteRows(at: [indexPath], with: .automatic)
         }
     }
