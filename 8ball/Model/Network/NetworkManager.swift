@@ -7,12 +7,6 @@
 
 import Foundation
 
-enum ObtainResult {
-    case success(String)
-    case failure(Bool)
-}
-
-
 class NetworkManager {
 
     private let sessionConfiguration = URLSessionConfiguration.default
@@ -34,12 +28,11 @@ class NetworkManager {
             
             guard let strongSelf = self else { result = .failure(true); return }
             guard error == nil, let data = data else {
-                print(error?.localizedDescription ?? "error")
                 result = .failure(true)
                 return
             }
             
-            let answers = try? strongSelf.decoder.decode(Welcome.self, from: data)
+            let answers = try? strongSelf.decoder.decode(MagicBallAPI.self, from: data)
             if let answer = answers?.magic.answer {
                 result = .success(answer)
             } else {
@@ -49,5 +42,7 @@ class NetworkManager {
     }
 }
 
-
-
+enum ObtainResult {
+    case success(String)
+    case failure(Bool)
+}

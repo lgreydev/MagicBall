@@ -9,8 +9,6 @@ import Foundation
 import UIKit
 
 class SettingsViewController: UIViewController {
-
-//    var listAnswers: [String] = Answers.demoData
     
     private let table: UITableView = {
         let table = UITableView()
@@ -37,7 +35,7 @@ class SettingsViewController: UIViewController {
     
     @objc private func addTap() {
         let alert = UIAlertController(
-            title: "My answers",
+            title: "Demo List Answers",
             message: "Set and save answers",
             preferredStyle: .alert)
         alert.addTextField { field in
@@ -49,10 +47,6 @@ class SettingsViewController: UIViewController {
             guard let text = field.text, !text.isEmpty else { fatalError() }
             
             DispatchQueue.main.async {
-//                var currentItems = UserDefaults.standard.stringArray(forKey: "demo") ?? []
-//                currentItems.append(text)
-//                UserDefaults.standard.setValue(currentItems, forKey: "demo")
-//                self?.listAnswers.append(text) // TOD
                 Answers.demoData.append(text)
                 self?.table.reloadData()
             }
@@ -61,16 +55,14 @@ class SettingsViewController: UIViewController {
     }
 }
 
-
+// MARK: - TableViewDataSource
 extension SettingsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return listAnswers.count // TODO
         return Answers.demoData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-//        cell.textLabel?.text = listAnswers[indexPath.row] // TODO
         cell.textLabel?.text = Answers.demoData[indexPath.row]
         cell.backgroundColor = .gray.withAlphaComponent(0.2)
         cell.textLabel?.textColor = .white
@@ -79,10 +71,6 @@ extension SettingsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-//            var currentItems = UserDefaults.standard.stringArray(forKey: "demo") ?? []
-//            currentItems.remove(at: indexPath.row)
-//            UserDefaults.standard.setValue(currentItems, forKey: "demo")
-//            self.listAnswers.remove(at: indexPath.row) // TODO
             Answers.demoData.remove(at: indexPath.row)
             self.table.deleteRows(at: [indexPath], with: .automatic)
         }

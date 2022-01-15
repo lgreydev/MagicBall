@@ -11,7 +11,7 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var answer: UILabel!
     
-    let networkManager = NetworkManager()
+    private let networkManager = NetworkManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,16 +19,7 @@ class HomeViewController: UIViewController {
         answer.text = "Shake me!"
     }
     
-    
-    // We are willing to become first responder to get shake motion
-    override var canBecomeFirstResponder: Bool {
-        get {
-            
-            return true
-        }
-    }
-    
-    // Enable detection of shake motion
+    // MARK: - Shake motion
     override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
         if motion == .motionShake {
             networkManager.postRequest { result in
@@ -38,7 +29,6 @@ class HomeViewController: UIViewController {
                 case .failure(_):
                     self.answer.text = Answers.demoData[Int.random(in: 0..<Answers.demoData.count)]
                 }
-                print(Answers.demoData)
             }
         }
     }

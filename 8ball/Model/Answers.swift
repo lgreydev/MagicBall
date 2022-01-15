@@ -8,18 +8,6 @@
 import Foundation
 
 struct Answers {
-    
-  static var demoData = ["Just do it!", "You rock!", "All or nothing."]
-  static var serverData: [String] = ["Shake me!"]
-
+  static var demoData = ["Just do it! 🤠", "You rock!🤘", "OMG 😱" , "You are awesome 😎", "WTF 🤯"]
 }
 
-// MARK: - Welcome
-struct Welcome: Codable {
-    let magic: Magic
-}
-
-// MARK: - Magic
-struct Magic: Codable {
-    let question, answer, type: String
-}

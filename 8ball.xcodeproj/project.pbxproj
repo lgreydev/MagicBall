@@ -16,6 +16,7 @@
 		5E4D3FF12790BC8000A0861A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4D3FF02790BC7F00A0861A /* SettingsViewController.swift */; };
 		5E4D3FF427916B6C00A0861A /* Answers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4D3FF327916B6C00A0861A /* Answers.swift */; };
 		5E4D3FF92791AC8500A0861A /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4D3FF82791AC8500A0861A /* NetworkManager.swift */; };
+		5E4D3FFC2792E1DD00A0861A /* MagicBallAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4D3FFB2792E1DD00A0861A /* MagicBallAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		5E4D3FF02790BC7F00A0861A /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		5E4D3FF327916B6C00A0861A /* Answers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answers.swift; sourceTree = "<group>"; };
 		5E4D3FF82791AC8500A0861A /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		5E4D3FFB2792E1DD00A0861A /* MagicBallAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicBallAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,9 +64,8 @@
 		5E4D3FDB2790867400A0861A /* 8ball */ = {
 			isa = PBXGroup;
 			children = (
-				5E4D3FFA2791ACD600A0861A /* Controllers */,
-				5E4D3FF72791AC5A00A0861A /* Network */,
 				5E4D3FF527916B7400A0861A /* Views */,
+				5E4D3FFA2791ACD600A0861A /* Controllers */,
 				5E4D3FF227916B5C00A0861A /* Model */,
 				5E4D3FF627916BBF00A0861A /* SupportingFiles */,
 			);
@@ -74,6 +75,7 @@
 		5E4D3FF227916B5C00A0861A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5E4D3FF72791AC5A00A0861A /* Network */,
 				5E4D3FF327916B6C00A0861A /* Answers.swift */,
 			);
 			path = Model;
@@ -103,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				5E4D3FF82791AC8500A0861A /* NetworkManager.swift */,
+				5E4D3FFB2792E1DD00A0861A /* MagicBallAPI.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 				5E4D3FE12790867400A0861A /* HomeViewController.swift in Sources */,
 				5E4D3FDD2790867400A0861A /* AppDelegate.swift in Sources */,
 				5E4D3FDF2790867400A0861A /* SceneDelegate.swift in Sources */,
+				5E4D3FFC2792E1DD00A0861A /* MagicBallAPI.swift in Sources */,
 				5E4D3FF427916B6C00A0861A /* Answers.swift in Sources */,
 				5E4D3FF12790BC8000A0861A /* SettingsViewController.swift in Sources */,
 			);
@@ -347,6 +351,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -358,7 +363,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -375,6 +380,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -386,7 +392,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
