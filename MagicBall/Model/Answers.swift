@@ -8,6 +8,6 @@
 import Foundation
 
 struct Answers {
-  static var demoData = ["Just do it! 🤠", "You rock!🤘", "OMG 😱" , "You are awesome 😎", "WTF 🤯"]
+  static var demoData = ["Just do it! 🤠", "You rock!🤘", "OMG 😱" , "You are awesome 😎", "WTF 🤬"]
 }
 
