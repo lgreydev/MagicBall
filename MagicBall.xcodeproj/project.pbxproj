@@ -18,6 +18,7 @@
 		5E4D3FF427916B6C00A0861A /* Answers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4D3FF327916B6C00A0861A /* Answers.swift */; };
 		5E4D3FF92791AC8500A0861A /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4D3FF82791AC8500A0861A /* NetworkManager.swift */; };
 		5E4D3FFC2792E1DD00A0861A /* MagicBallAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4D3FFB2792E1DD00A0861A /* MagicBallAPI.swift */; };
+		5EDC6A0F27BBC06500C1B453 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 5EDC6A0E27BBC06500C1B453 /* README.md */; };
 		5EF855FE2794319800A9DE67 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 5EF855FD2794319800A9DE67 /* .gitignore */; };
 		5EF8560427943B3200A9DE67 /* 002.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5EF8560227943B3200A9DE67 /* 002.jpg */; };
 		5EF8560527943B3200A9DE67 /* 001.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5EF8560327943B3200A9DE67 /* 001.jpg */; };
@@ -37,6 +38,7 @@
 		5E4D3FF327916B6C00A0861A /* Answers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answers.swift; sourceTree = "<group>"; };
 		5E4D3FF82791AC8500A0861A /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		5E4D3FFB2792E1DD00A0861A /* MagicBallAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicBallAPI.swift; sourceTree = "<group>"; };
+		5EDC6A0E27BBC06500C1B453 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		5EF855FD2794319800A9DE67 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		5EF8560227943B3200A9DE67 /* 002.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 002.jpg; sourceTree = "<group>"; };
 		5EF8560327943B3200A9DE67 /* 001.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 001.jpg; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 			children = (
 				5EF8560627943C0000A9DE67 /* License */,
 				5EF855FD2794319800A9DE67 /* .gitignore */,
+				5EDC6A0E27BBC06500C1B453 /* README.md */,
 				5E4D3FDB2790867400A0861A /* MagicBall */,
 				5E4D3FDA2790867400A0861A /* Products */,
 				5EF856012794395F00A9DE67 /* Screenshots */,
@@ -211,6 +214,7 @@
 				5E4D3FE92790867600A0861A /* LaunchScreen.storyboard in Resources */,
 				5EF8560527943B3200A9DE67 /* 001.jpg in Resources */,
 				5E4D3FE62790867600A0861A /* Assets.xcassets in Resources */,
+				5EDC6A0F27BBC06500C1B453 /* README.md in Resources */,
 				5E4D3FE42790867400A0861A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
