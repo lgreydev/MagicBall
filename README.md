@@ -19,7 +19,9 @@ Just shake your iPhone and you will get an answer. It `s Magic! Application rece
 
 - Create two more feature branches: in the first one modify **Readme.md** file, in the second one - delete it. Merge both of them into **develop** by resolving merge conflict.
 
-- Use only Terminal commands!
+- **Use only Terminal commands!**
+
+- Add dependency using **Cocoapods** or **SPM** in your project. It may be anything you want: network library like **Alamofire**, spinner like **SVProgressHUD**, etc.
 
 
 
