@@ -9,6 +9,18 @@ Just shake your iPhone and you will get an answer. It `s Magic! Application rece
 <img src="https://github.com/lgreydev/MagicBall/blob/main/Screenshots/001.jpg" width="350"><img src="https://github.com/lgreydev/MagicBall/blob/main/Screenshots/002.jpg" width="350">
  
 
+## Homework 1
+
+- If you don’t have **develop branch** in your repository, then create it from master
+
+- Create **feature branch** and add **.gitignore** file - if you have one, then make some change in **Readme.md**
+
+- Commit change and merge it into **develop** using Merge Request
+
+- Create two more feature branches: in the first one modify **Readme.md** file, in the second one - delete it. Merge both of them into **develop** by resolving merge conflict.
+
+
+
 ### 🛡️ License
 
 This project is licensed under the MIT License - see the [`LICENSE`](https://github.com/lgreydev/MagicBall/blob/main/License) file for details.
