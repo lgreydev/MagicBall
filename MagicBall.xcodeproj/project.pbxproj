@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E3163EE27BBA12D00D90BF5 /* Algorithms in Frameworks */ = {isa = PBXBuildFile; productRef = 5E3163ED27BBA12D00D90BF5 /* Algorithms */; };
 		5E4D3FDD2790867400A0861A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4D3FDC2790867400A0861A /* AppDelegate.swift */; };
 		5E4D3FDF2790867400A0861A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4D3FDE2790867400A0861A /* SceneDelegate.swift */; };
 		5E4D3FE12790867400A0861A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4D3FE02790867400A0861A /* HomeViewController.swift */; };
@@ -47,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E3163EE27BBA12D00D90BF5 /* Algorithms in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,6 +157,9 @@
 			dependencies = (
 			);
 			name = MagicBall;
+			packageProductDependencies = (
+				5E3163ED27BBA12D00D90BF5 /* Algorithms */,
+			);
 			productName = 8ball;
 			productReference = 5E4D3FD92790867400A0861A /* MagicBall.app */;
 			productType = "com.apple.product-type.application";
@@ -183,6 +188,9 @@
 				Base,
 			);
 			mainGroup = 5E4D3FD02790867400A0861A;
+			packageReferences = (
+				5E3163EC27BBA12D00D90BF5 /* XCRemoteSwiftPackageReference "swift-algorithms" */,
+			);
 			productRefGroup = 5E4D3FDA2790867400A0861A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -444,6 +452,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5E3163EC27BBA12D00D90BF5 /* XCRemoteSwiftPackageReference "swift-algorithms" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-algorithms.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5E3163ED27BBA12D00D90BF5 /* Algorithms */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5E3163EC27BBA12D00D90BF5 /* XCRemoteSwiftPackageReference "swift-algorithms" */;
+			productName = Algorithms;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5E4D3FD12790867400A0861A /* Project object */;
 }
