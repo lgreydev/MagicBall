@@ -9,7 +9,7 @@ Just shake your iPhone and you will get an answer. It `s Magic! Application rece
 <img src="https://github.com/lgreydev/MagicBall/blob/main/Screenshots/001.jpg" width="350"><img src="https://github.com/lgreydev/MagicBall/blob/main/Screenshots/002.jpg" width="350">
  
 
-## Homework 1
+## Homework 1 📚
 
 - If you don’t have **develop branch** in your repository, then create it from master
 
