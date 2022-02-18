@@ -15,7 +15,7 @@ class NetworkManager {
     
     func postRequest(completion: @escaping (ObtainResult) -> Void ) {
         
-        guard let url = URL(string: "https://8ball.delegator.com/magic/JSON/question_string") else { fatalError() }
+        guard let url = URL(string: "https://8ball.delegator.com/magic/JSON/question_string") else { return }
         
         session.dataTask(with: url) { [weak self] (data, response, error) in
             
