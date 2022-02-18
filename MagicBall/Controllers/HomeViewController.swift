@@ -22,7 +22,7 @@ class HomeViewController: UIViewController {
     // MARK: - Shake motion
     override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
         if motion == .motionShake {
-            answerLabel.text = answer.get()
+            answer.get(for: answerLabel)
         }
     }
 }

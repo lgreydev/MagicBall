@@ -6,21 +6,21 @@
 //
 
 import Foundation
+import UIKit
 
 class Answer {
     
     private let networkManager = NetworkManager()
 
-    func get() -> String {
-        var answer = ""
+    func get(for label: UILabel) {
         networkManager.postRequest { result in
             switch result {
-            case .success(let str):
-                answer = str
+            case .success(let answer):
+                label.text = answer
             case .failure(_):
-                answer = DemoData.answers[Int.random(in: 0..<DemoData.answers.count)]
+                label.text = DemoData.answers[Int.random(in: 0..<DemoData.answers.count)]
             }
         }
-        return answer
     }
 }
+
