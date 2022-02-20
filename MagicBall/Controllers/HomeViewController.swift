@@ -11,7 +11,7 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var answerLabel: UILabel!
     
-    private let answer = Answer()
+    private let answer = MagicBall()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +22,7 @@ class HomeViewController: UIViewController {
     // MARK: - Shake motion
     override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
         if motion == .motionShake {
-            answer.get(for: answerLabel)
+            answer.getAnswer(for: answerLabel)
         }
     }
 }

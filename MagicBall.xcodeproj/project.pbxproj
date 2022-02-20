@@ -15,7 +15,7 @@
 		5E4D3FE62790867600A0861A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E4D3FE52790867600A0861A /* Assets.xcassets */; };
 		5E4D3FE92790867600A0861A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E4D3FE72790867600A0861A /* LaunchScreen.storyboard */; };
 		5E4D3FF12790BC8000A0861A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4D3FF02790BC7F00A0861A /* SettingsViewController.swift */; };
-		5E4D3FF427916B6C00A0861A /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4D3FF327916B6C00A0861A /* Answer.swift */; };
+		5E4D3FF427916B6C00A0861A /* MagicBall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4D3FF327916B6C00A0861A /* MagicBall.swift */; };
 		5E4D3FF92791AC8500A0861A /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4D3FF82791AC8500A0861A /* NetworkManager.swift */; };
 		5E4D3FFC2792E1DD00A0861A /* MagicBallAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4D3FFB2792E1DD00A0861A /* MagicBallAPI.swift */; };
 		5EEF756B27BF9042007A1C99 /* DemoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEF756A27BF9042007A1C99 /* DemoData.swift */; };
@@ -35,7 +35,7 @@
 		5E4D3FE82790867600A0861A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5E4D3FEA2790867600A0861A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E4D3FF02790BC7F00A0861A /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		5E4D3FF327916B6C00A0861A /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
+		5E4D3FF327916B6C00A0861A /* MagicBall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicBall.swift; sourceTree = "<group>"; };
 		5E4D3FF82791AC8500A0861A /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		5E4D3FFB2792E1DD00A0861A /* MagicBallAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicBallAPI.swift; sourceTree = "<group>"; };
 		5EEF756A27BF9042007A1C99 /* DemoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoData.swift; sourceTree = "<group>"; };
@@ -79,6 +79,7 @@
 		5E4D3FDB2790867400A0861A /* MagicBall */ = {
 			isa = PBXGroup;
 			children = (
+				5E4D3FF72791AC5A00A0861A /* Network */,
 				5E4D3FF527916B7400A0861A /* Views */,
 				5E4D3FFA2791ACD600A0861A /* Controllers */,
 				5E4D3FF227916B5C00A0861A /* Model */,
@@ -90,8 +91,8 @@
 		5E4D3FF227916B5C00A0861A /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				5E4D3FF72791AC5A00A0861A /* Network */,
-				5EEF756E27BFA7BF007A1C99 /* Answers */,
+				5E4D3FF327916B6C00A0861A /* MagicBall.swift */,
+				5EEF756A27BF9042007A1C99 /* DemoData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -132,15 +133,6 @@
 				5E4D3FF02790BC7F00A0861A /* SettingsViewController.swift */,
 			);
 			path = Controllers;
-			sourceTree = "<group>";
-		};
-		5EEF756E27BFA7BF007A1C99 /* Answers */ = {
-			isa = PBXGroup;
-			children = (
-				5E4D3FF327916B6C00A0861A /* Answer.swift */,
-				5EEF756A27BF9042007A1C99 /* DemoData.swift */,
-			);
-			path = Answers;
 			sourceTree = "<group>";
 		};
 		5EF856012794395F00A9DE67 /* Screenshots */ = {
@@ -239,7 +231,7 @@
 				5E4D3FDD2790867400A0861A /* AppDelegate.swift in Sources */,
 				5E4D3FDF2790867400A0861A /* SceneDelegate.swift in Sources */,
 				5E4D3FFC2792E1DD00A0861A /* MagicBallAPI.swift in Sources */,
-				5E4D3FF427916B6C00A0861A /* Answer.swift in Sources */,
+				5E4D3FF427916B6C00A0861A /* MagicBall.swift in Sources */,
 				5E4D3FF12790BC8000A0861A /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

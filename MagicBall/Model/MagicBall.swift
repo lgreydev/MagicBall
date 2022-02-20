@@ -8,11 +8,11 @@
 import Foundation
 import UIKit
 
-class Answer {
+class MagicBall {
     
     private let networkManager = NetworkManager()
-
-    func get(for label: UILabel) {
+    
+    func getAnswer(for label: UILabel) {
         networkManager.postRequest { result in
             switch result {
             case .success(let answer):
