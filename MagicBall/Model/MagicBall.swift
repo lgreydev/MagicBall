@@ -11,6 +11,7 @@ import UIKit
 class MagicBall {
     
     private let networkManager = NetworkManager()
+    private let randomAnswer = RandomAnswer()
     
     func getAnswer(for label: UILabel) {
         networkManager.postRequest { result in
@@ -18,7 +19,7 @@ class MagicBall {
             case .success(let answer):
                 label.text = answer
             case .failure(_):
-                label.text = DemoData.answers[Int.random(in: 0..<DemoData.answers.count)]
+                label.text = self.randomAnswer.get()
             }
         }
     }
