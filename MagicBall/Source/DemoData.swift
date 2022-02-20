@@ -9,5 +9,6 @@ import Foundation
 
 struct DemoData {
     static var answers = ["Just do it! 🤠", "You rock!🤘", "OMG 😱" , "You are awesome 😎", "WTF 🤬"]
+    private init() {}
 }
 
