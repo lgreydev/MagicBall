@@ -11,7 +11,7 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var answerLabel: UILabel!
     
-    private let magicBall = MagicBall()
+    var magicBall = MagicBall()
     
     override func viewDidLoad() {
         super.viewDidLoad()
