@@ -10,8 +10,12 @@ import UIKit
 
 class MagicBall {
     
-    private let networkManager = NetworkManager()
+    private let networkManager: NetworkManagerProtocol
     private let randomAnswer = RandomAnswer()
+    
+    init(networkManager: NetworkManagerProtocol = NetworkManager()) {
+        self.networkManager = networkManager
+    }
     
     func getAnswer(for label: UILabel) {
         networkManager.postRequest { result in

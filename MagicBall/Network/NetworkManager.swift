@@ -7,7 +7,13 @@
 
 import Foundation
 
-class NetworkManager {
+protocol NetworkManagerProtocol: AnyObject {
+    
+    func postRequest(completion: @escaping (ObtainResult) -> Void)
+    
+}
+
+class NetworkManager: NetworkManagerProtocol {
 
     private let sessionConfiguration = URLSessionConfiguration.default
     private let session = URLSession.shared
