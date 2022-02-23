@@ -9,13 +9,15 @@ import Foundation
 import UIKit
 
 class SettingsViewController: UIViewController {
-    
+
+    // MARK: - Private Properties
     private let table: UITableView = {
         let table = UITableView()
         table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         return table
     }()
-    
+
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         table.dataSource = self
@@ -32,7 +34,8 @@ class SettingsViewController: UIViewController {
         super.viewDidLayoutSubviews()
         table.frame = view.bounds
     }
-    
+
+    // MARK: - Public Methods
     @objc private func addTap() {
         let alert = UIAlertController(
             title: "Demo List Answers",
@@ -47,7 +50,7 @@ class SettingsViewController: UIViewController {
             guard let text = field.text, !text.isEmpty else { fatalError() }
             
             DispatchQueue.main.async {
-                Answers.demoData.append(text)
+                DemoData.answers.append(text)
                 self?.table.reloadData()
             }
         }))
@@ -58,12 +61,12 @@ class SettingsViewController: UIViewController {
 // MARK: - TableViewDataSource
 extension SettingsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Answers.demoData.count
+        return DemoData.answers.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = Answers.demoData[indexPath.row]
+        cell.textLabel?.text = DemoData.answers[indexPath.row]
         cell.backgroundColor = .gray.withAlphaComponent(0.2)
         cell.textLabel?.textColor = .white
         return cell
@@ -71,7 +74,7 @@ extension SettingsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            Answers.demoData.remove(at: indexPath.row)
+            DemoData.answers.remove(at: indexPath.row)
             self.table.deleteRows(at: [indexPath], with: .automatic)
         }
     }
