@@ -9,13 +9,15 @@ import Foundation
 import UIKit
 
 class SettingsViewController: UIViewController {
-    
+
+    // MARK: - Private Properties
     private let table: UITableView = {
         let table = UITableView()
         table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         return table
     }()
-    
+
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         table.dataSource = self
@@ -32,7 +34,8 @@ class SettingsViewController: UIViewController {
         super.viewDidLayoutSubviews()
         table.frame = view.bounds
     }
-    
+
+    // MARK: - Public Methods
     @objc private func addTap() {
         let alert = UIAlertController(
             title: "Demo List Answers",

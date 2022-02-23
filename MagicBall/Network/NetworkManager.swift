@@ -8,9 +8,7 @@
 import Foundation
 
 protocol NetworkManagerProtocol: AnyObject {
-    
     func postRequest(completion: @escaping (ObtainResult) -> Void)
-    
 }
 
 class NetworkManager: NetworkManagerProtocol {

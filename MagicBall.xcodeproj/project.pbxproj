@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		5E3163EE27BBA12D00D90BF5 /* Algorithms in Frameworks */ = {isa = PBXBuildFile; productRef = 5E3163ED27BBA12D00D90BF5 /* Algorithms */; };
-		5E40ECDB27C2C1E200E9A56F /* RandomAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E40ECDA27C2C1E200E9A56F /* RandomAnswer.swift */; };
 		5E4D3FDD2790867400A0861A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4D3FDC2790867400A0861A /* AppDelegate.swift */; };
 		5E4D3FDF2790867400A0861A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4D3FDE2790867400A0861A /* SceneDelegate.swift */; };
 		5E4D3FE12790867400A0861A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4D3FE02790867400A0861A /* HomeViewController.swift */; };
@@ -28,7 +27,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5E40ECDA27C2C1E200E9A56F /* RandomAnswer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomAnswer.swift; sourceTree = "<group>"; };
 		5E4D3FD92790867400A0861A /* MagicBall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagicBall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E4D3FDC2790867400A0861A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5E4D3FDE2790867400A0861A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,7 +63,6 @@
 			isa = PBXGroup;
 			children = (
 				5EEF756A27BF9042007A1C99 /* DemoData.swift */,
-				5E40ECDA27C2C1E200E9A56F /* RandomAnswer.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -248,7 +245,6 @@
 				5E4D3FFC2792E1DD00A0861A /* MagicBallAPI.swift in Sources */,
 				5E4D3FF427916B6C00A0861A /* MagicBall.swift in Sources */,
 				5E4D3FF12790BC8000A0861A /* SettingsViewController.swift in Sources */,
-				5E40ECDB27C2C1E200E9A56F /* RandomAnswer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

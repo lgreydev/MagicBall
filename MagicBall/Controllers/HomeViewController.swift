@@ -8,18 +8,21 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-    
+
+    // MARK: - IBOutlets
     @IBOutlet weak var answerLabel: UILabel!
-    
-    var magicBall = MagicBall()
-    
+
+    // MARK: - Private Properties
+    private var magicBall = MagicBall()
+
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.becomeFirstResponder()
         answerLabel.text = "Shake me!"
     }
     
-    // MARK: - Shake motion
+    // MARK: - Actions
     override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
         if motion == .motionShake {
             magicBall.getAnswer(for: answerLabel)

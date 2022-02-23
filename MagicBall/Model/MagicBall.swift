@@ -9,21 +9,25 @@ import Foundation
 import UIKit
 
 class MagicBall {
-    
+
+    // MARK: - Private Properties
     private let networkManager: NetworkManagerProtocol
-    private let randomAnswer = RandomAnswer()
-    
-    init(networkManager: NetworkManagerProtocol = NetworkManager()) {
+    private let demoData: DemoDataProtocol
+
+    // MARK: - Initializer
+    init(networkManager: NetworkManagerProtocol = NetworkManager(), demoData: DemoDataProtocol = DemoData()) {
         self.networkManager = networkManager
+        self.demoData = demoData
     }
-    
+
+    // MARK: - Public Methods
     func getAnswer(for label: UILabel) {
         networkManager.postRequest { result in
             switch result {
             case .success(let answer):
                 label.text = answer
             case .failure(_):
-                label.text = self.randomAnswer.get()
+                label.text = self.demoData.getRandomAnswer()
             }
         }
     }
